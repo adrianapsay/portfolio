@@ -6,15 +6,17 @@
     <title>Resume</title>
 </head>
 <body>
+    <!-- Navigation -->
     <nav>
-        <a href="../index.html">Home</a>
-        <a href="../projects/index.html">Projects</a>
-        <a href="../contact/index.html">Contact</a>
-        <a href="index.html">Resume</a>
-        <a href="https://github.com/adrianapsay" target="_blank">GitHub Profile</a>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../projects/index.html">Projects</a></li>
+        <li><a href="../contact/index.html">Contact</a></li>
+        <li><a href="index.html">Resume</a></li>
+        <li><a href="https://github.com/adrianapsay" target="_blank">GitHub Profile</a></li>
     </nav>
 
     <h1>Resume</h1>
+    <!-- Education Section -->
     <section>
         <header>
             <h2>Education</h2>
@@ -28,3 +30,91 @@
         </article>
     </section>
 
+    <!-- Experience Section -->
+    <section>
+        <header>
+            <h2>Experience</h2>
+        </header>
+        <article>
+            <header>
+                <h3>Data Science & Analytics Intern</h3>
+                <p><strong>Seagate Technology</strong></p>
+                <time datetime="2025-06">June 2025</time>
+            </header>
+            <ul>
+                <li>
+                    Upcoming Summer 2025: Global Revenue Operations & Analytics Team
+                </li>
+            </ul>
+        </article>
+        <article>
+            <header>
+                <h3>Data Science Intern</h3>
+                <p><strong>San Diego County Sheriff's Department</strong></p>
+                <time datetime="2023-10">October 2023</time> – Present
+            </header>
+            <ul>
+                <li>
+                    Developing an information retrieval system using Retrieval-Augmented Generation (RAG) to improve accessibility
+                    for emails sent to the incarcerated, <br>leveraging OpenAI embeddings with Azure AI Search and Cosmos DB for vector-based
+                    search and indexing, generating insights and facilitating fast <br>and accurate extraction of relevant details from these
+                    emails based on client queries.
+                </li>
+                <li>
+                    Implementing clustering algorithms (K-Means, HDBSCAN) on 2024 email data, utilizing vector embedding representations and employing UMAP, <br>
+                    Plotly, TF-IDF, and the OpenAI API to visualize and topic model each cluster as well as Python, scikit-learn, and Jupyter Notebook for further exploratory <br>
+                    data analysis.
+                </li>
+                <li>
+                    Engineering Extract-Transform-Load (ETL) data pipelines to migrate and transform over 10 million rows of data  from on-premises SQL Server <br>
+                    databases to data lake cloud storage using Azure Synapse Analytics, PySpark, and T-SQL, contributing to the department’s early transition to scalable, <br>
+                    cloud-based data workflows.
+                </li>
+            </ul>
+        </article>
+        <article>
+            <header>
+                <h3>Undergraduate Teaching Assistant</h3>
+                <p><strong>Halıcıoğlu Data Science Institute, UCSD</strong></p>
+                <time datetime="2024-01">January 2024</time> – Present
+            </header>
+            <ul>
+                <li>Provided Python programming guidance to over 500 students.</li>
+                <li>Graded assignments and supported coursework for data structures and algorithms.</li>
+            </ul>
+        </article>
+    </section>
+
+    <!-- Skills Section -->
+    <section>
+        <header>
+            <h2>Skills</h2>
+        </header>
+        <ul>
+            <li>Programming Languages: Python, SQL, Java</li>
+            <li>Libraries: pandas, NumPy, scikit-learn, TensorFlow</li>
+            <li>Tools: Jupyter Notebook, GitHub, Microsoft Azure</li>
+            <li>Soft Skills: Collaboration, problem-solving, communication</li>
+        </ul>
+    </section>
+
+    <!-- Projects Section -->
+    <section>
+        <header>
+            <h2>Projects</h2>
+        </header>
+        <article>
+            <header>
+                <h3>Speech Emotion Recognition Classifier</h3>
+            </header>
+            <p>Built a CNN model optimized with PyTorch to classify emotions from speech using the CREMA-D dataset.</p>
+        </article>
+        <article>
+            <header>
+                <h3>Power Outage Analysis</h3>
+            </header>
+            <p>Analyzed U.S. power outage data using feature engineering and Random Forest classifiers to predict outages.</p>
+        </article>
+    </section>
+</body>
+</html>
