@@ -15,11 +15,15 @@ function $$(selector, context = document) {
 // currentLink.classList.add('current');
 // }
 
+const base = window.location.pathname.includes('/<repository-name>/')
+  ? '/<repository-name>/'
+  : '/';
+
 let pages = [
-    { url: '', title: 'Home' },
-    { url: 'projects/', title: 'Projects' },
-    { url: 'contact/', title: 'Contact' },
-    { url: 'resume/', title: 'Resume' },
+    { url: base, title: 'Home' },
+    { url: base + 'projects/', title: 'Projects' },
+    { url: base + 'contact/', title: 'Contact' },
+    { url: base + 'resume/', title: 'Resume' },
     { url: 'https://github.com/adrianapsay', title: 'GitHub Profile' }, // Absolute URL
 ];
 
