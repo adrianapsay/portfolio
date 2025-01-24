@@ -15,16 +15,12 @@ function $$(selector, context = document) {
 // currentLink.classList.add('current');
 // }
 
-const base = window.location.pathname.includes('/<repository-name>/')
-  ? '/<repository-name>/'
-  : '/';
-
 let pages = [
-    { url: base, title: 'Home' },
-    { url: base + 'projects/', title: 'Projects' },
-    { url: base + 'contact/', title: 'Contact' },
-    { url: base + 'resume/', title: 'Resume' },
-    { url: 'https://github.com/adrianapsay', title: 'GitHub Profile' }, // Absolute URL
+    { url: '', title: 'Home' },
+    { url: 'projects/', title: 'Projects' },
+    { url: 'contact/', title: 'Contact' },
+    { url: 'resume/', title: 'Resume' },
+    { url: 'https://github.com/adrianapsay', title: 'GitHub Profile' },
 ];
 
 let nav = document.createElement('nav');
@@ -32,26 +28,32 @@ document.body.prepend(nav);
 
 const ARE_WE_HOME = document.documentElement.classList.contains('home');
 
+const BASE_PATH = window.location.pathname.includes('/<repository-name>/') 
+  ? '/<repository-name>/' 
+  : '/'; // Dynamically detect the base path
+
 for (let p of pages) {
     let url = p.url;
     let title = p.title;
 
-    url = !ARE_WE_HOME && !url.startsWith('http') ? '../' + url : url;
+    // Adjust relative URLs based on the base path
+    url = !url.startsWith('http') ? BASE_PATH + url : url;
 
     let a = document.createElement('a');
     a.href = url;
     a.textContent = title;
     nav.append(a);
 
+    // Highlight the current page
     a.classList.toggle(
         'current',
         a.host === location.host && a.pathname === location.pathname
     );
-    
+
+    // Open external links in a new tab
     if (a.host != location.host) {
-        a.target = "_blank"
+        a.target = "_blank";
     }
-    
 }
 
 document.body.insertAdjacentHTML(
