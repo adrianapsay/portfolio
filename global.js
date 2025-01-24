@@ -4,16 +4,16 @@ function $$(selector, context = document) {
   return Array.from(context.querySelectorAll(selector));
 }
 
-// const navLinks = Array.from($$("nav a"));
+const navLinks = Array.from($$("nav a"));
 // console.log(navLinks);
 
-// let currentLink = navLinks.find(
-//     (a) => a.host === location.host && a.pathname === location.pathname
-//   );
+let currentLink = navLinks.find(
+    (a) => a.host === location.host && a.pathname === location.pathname
+  );
 
-// if (currentLink) {
-// currentLink.classList.add('current');
-// }
+if (currentLink) {
+currentLink.classList.add('current');
+}
 
 let pages = [
     { url: '', title: 'Home' },
@@ -28,32 +28,26 @@ document.body.prepend(nav);
 
 const ARE_WE_HOME = document.documentElement.classList.contains('home');
 
-const BASE_PATH = window.location.pathname.includes('/<repository-name>/') 
-  ? '/<repository-name>/' 
-  : '/'; // Dynamically detect the base path
-
 for (let p of pages) {
     let url = p.url;
     let title = p.title;
 
-    // Adjust relative URLs based on the base path
-    url = !url.startsWith('http') ? BASE_PATH + url : url;
+    url = !ARE_WE_HOME && !url.startsWith('http') ? '../' + url : url;
 
     let a = document.createElement('a');
     a.href = url;
     a.textContent = title;
     nav.append(a);
 
-    // Highlight the current page
     a.classList.toggle(
         'current',
         a.host === location.host && a.pathname === location.pathname
     );
-
-    // Open external links in a new tab
+    
     if (a.host != location.host) {
-        a.target = "_blank";
+        a.target = "_blank"
     }
+    
 }
 
 document.body.insertAdjacentHTML(
