@@ -16,10 +16,10 @@ function $$(selector, context = document) {
 // }
 
 let pages = [
-    { url: '', title: 'Home' },
-    { url: 'projects/', title: 'Projects' },
-    { url: 'contact/', title: 'Contact' },
-    { url: 'resume/', title: 'Resume' },
+    { url: '/portfolio', title: 'Home' },
+    { url: '/portfolio/projects/', title: 'Projects' },
+    { url: '/portfolio/contact/', title: 'Contact' },
+    { url: '/portfolio/resume/', title: 'Resume' },
     { url: 'https://github.com/adrianapsay', title: 'GitHub Profile' },
 ];
 
@@ -37,19 +37,16 @@ for (let p of pages) {
     let a = document.createElement('a');
     a.href = url;
     a.textContent = title;
+    nav.append(a);
 
     a.classList.toggle(
         'current',
         a.host === location.host && a.pathname === location.pathname
     );
     
-    // if (a.host != location.host) {
-    //     a.target = "_blank"
-    // }
-
-    a.target = a.host !== location.host ? '_blank' : '_self';
-    nav.append(a);
-
+    if (a.host != location.host) {
+        a.target = "_blank"
+    }
     
 }
 
