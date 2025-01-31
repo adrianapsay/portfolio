@@ -94,6 +94,72 @@ form?.addEventListener('submit', function (event) {
   
     location.href = url;
   });
-  
+
+export async function fetchJSON(url) {
+  try {
+      // Fetch the JSON file from the given URL
+      const response = await fetch(url);
+      if (!response.ok) {
+        throw new Error(`Failed to fetch projects: ${response.statusText}`);
+    }
+    // console.log(response)
+    const data = await response.json();
+    return data;
+
+  } catch (error) {
+      console.error('Error fetching or parsing JSON data:', error);
+  }
+}
+
+// // Create an async function to load projects and call fetchJSON (works)
+// (async function loadProjects() {
+//     const data = await fetchJSON('../lib/projects.json');
+//     console.log(data);
+// })();
+
+
+
+export function renderProjects(projects, containerElement, headingLevel = 'h2') {
+  // Your code will go here
+  // Check if containerElement is valid DOM element
+  if (!containerElement || !(containerElement instanceof HTMLElement)) {
+    console.error('Invalid container element provided.');
+    return;
+  }
+
+  // Validate the heading level to ensure it's a valid heading tag
+  const validHeadings = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
+  if (!validHeadings.includes(headingLevel)) {
+      console.warn(`Invalid heading level "${headingLevel}". Defaulting to 'h2'.`);
+      headingLevel = 'h2';  // Fallback to a default heading level
+  }
+
+  containerElement.innerHTML = '';
+
+  for (let project of projects) {
+    const article = document.createElement('article');
+    article.innerHTML = `
+      <${headingLevel}>${project.title}</${headingLevel}>
+      <img src="${project.image}" alt="${project.title}">
+      <p>${project.description}</p>
+    `;
+    containerElement.appendChild(article);
+  }
+}
+
+
+// // testing different headingLevels (works)
+// (async function loadProjects() {
+//     // Fetch projects from the JSON file
+//     const projects = await fetchJSON('../lib/projects.json');
+
+//     // Select the container element (targeting the existing '.projects' div)
+//     const container = document.querySelector('.projects');
+
+//     // Render the projects
+//     renderProjects(projects, container, 'h2');
+// })();
+
+
 
 
