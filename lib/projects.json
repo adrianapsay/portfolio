@@ -1,62 +1,74 @@
 [
     {
         "title": "Project 1: Power Outage Analysis",
+        "year": "2024",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "In construction."
+        "description": "Conducted exploratory data analysis and developed a Random Forest classifier to predict the causes of U.S. power outages, achieving 73% testing accuracy."
     },
     {
-        "title": "Project 2",
+        "title": "AI Art Interaction - HDSI Lab",
+        "year": "2023",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "In construction."
+        "description": "Developed a facial recognition-based robotic flower using OpenCV and Raspberry Pi. Collaborated on a machine learning outreach project integrating robotics and AI."
     },
     {
-        "title": "Project 3",
+        "title": "Speech Emotion Recognition Classifier",
+        "year": "2024",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "In construction."
+        "description": "Built a convolutional neural network (CNN) for classifying speech emotions, optimizing hyperparameters to achieve significant improvements in classification accuracy."
     },
     {
-        "title": "Nam aliquam blanditiis accusantium.",
+        "title": "Dog or Cat? Image Classification",
+        "year": "2022",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Quis earum laboriosam, odio quod qui nam nostrum libero repellendus minus eum consequatur fuga maxime ipsa sequi quia hic consectetur accusantium? Ducimus et optio doloribus qui accusamus incidunt soluta eaque!"
+        "description": "Developed a deep learning image classifier to distinguish between cats and dogs with 98% accuracy. Preprocessed data and optimized model performance using TensorFlow."
     },
     {
-        "title": "Dolorum quibusdam maxime perferendis.",
+        "title": "AI-Generated Artwork Exploration",
+        "year": "2021",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Quas error ut, assumenda voluptate facilis sunt illo sit sint, odio iure mollitia, similique architecto culpa eius possimus magni temporibus quae illum quod? Officiis mollitia autem numquam quo recusandae earum."
+        "description": "Created AI models to generate abstract art based on various input parameters and datasets. Explored creative uses of GANs."
     },
     {
-        "title": "Quidem obcaecati vero adipisci.",
+        "title": "Robotic Hand Gesture Recognition",
+        "year": "2020",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Molestias ex hic quos. Eligendi eum optio ad atque voluptatem dolores ipsum nulla ducimus ipsam incidunt, itaque similique earum a, iste assumenda est hic possimus. Nesciunt nihil ipsum facilis sequi?"
+        "description": "Developed a real-time hand gesture recognition system using OpenCV and TensorFlow to control a robotic hand."
     },
     {
-        "title": "Nihil itaque laudantium quisquam?",
+        "title": "Data Visualization for Climate Change Trends",
+        "year": "2022",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Facilis dicta delectus itaque sit, impedit eos sapiente voluptas atque laudantium fugit mollitia ab ut cum aperiam nisi amet, aut eaque doloribus sed id aliquam, distinctio repudiandae. Necessitatibus, quia modi."
+        "description": "Analyzed and visualized climate change data over the last century using interactive dashboards and geospatial plots."
     },
     {
-        "title": "Dignissimos deleniti officiis amet?",
+        "title": "Real-Time Object Detection System",
+        "year": "2023",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Deserunt quaerat et quas sapiente sint architecto fugiat nobis error adipisci nostrum ducimus minus quidem aliquid neque voluptatibus, quisquam exercitationem nesciunt harum ea porro, debitis nisi! Consectetur aperiam quod eius."
+        "description": "Developed a real-time object detection system using YOLOv5, capable of recognizing and tracking multiple objects."
     },
     {
-        "title": "Praesentium eaque cum autem.",
+        "title": "Blockchain Application for Supply Chain",
+        "year": "2021",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Possimus suscipit voluptates ullam delectus accusantium corporis harum rem amet repudiandae voluptatibus dolorem excepturi recusandae magnam, beatae inventore earum eligendi ea! Iste dolores illum fugiat itaque? Laborum dolorem optio veniam."
+        "description": "Implemented a blockchain-based system to improve transparency and traceability in the supply chain of agricultural products."
     },
     {
-        "title": "Natus eius maiores itaque.",
+        "title": "Speech Emotion Recognition Classifier",
+        "year": "2023",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Sint saepe perferendis officiis culpa. Doloremque quaerat facilis iure impedit veniam dolor ab expedita sint ipsam mollitia rerum, saepe quibusdam sit autem laboriosam temporibus consequuntur enim labore placeat quia. Modi."
+        "description": "Developed and optimized a neural network to classify emotions from speech data using PyTorch and audio feature extraction."
     },
     {
-        "title": "At unde quia perspiciatis.",
+        "title": "Personal Finance Tracker App",
+        "year": "2020",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Nostrum odio ipsa, quia saepe, repudiandae placeat sequi nesciunt iste rerum earum vero accusantium in deserunt ducimus eveniet quas autem provident voluptates eligendi sed quam. Tempore rem obcaecati quia natus!"
+        "description": "Built a mobile application to track and visualize personal finance habits, integrating secure user authentication and data storage."
     },
     {
-        "title": "Molestiae cumque deserunt unde.",
+        "title": "Personal Finance Tracker App",
+        "year": "2020",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Molestiae ratione corporis id assumenda, in quibusdam eligendi tempora possimus tenetur quis. Deserunt ducimus perferendis consequuntur aliquid esse distinctio nihil libero quaerat maxime deleniti! Incidunt exercitationem architecto sequi ea aliquam?"
+        "description": "Built a mobile application to track and visualize personal finance habits, integrating secure user authentication and data storage."
     }
 ]
