@@ -33,7 +33,8 @@ let arcGenerator = d3.arc().innerRadius(0).outerRadius(50);
 //   angle = endAngle;
 // }
 
-let projects = await fetchJSON('../lib/projects.json'); // fetch your project data
+let projects = await fetchJSON('../lib/projects.json');
+// console.log(projects)
 let rolledData = d3.rollups(
   projects,
   (v) => v.length,
@@ -66,7 +67,8 @@ data.forEach((d, idx) => {
 let query = '';
 
 let searchInput = document.querySelector('.searchBar');
-searchInput.addEventListener('change', (event) => {
+
+searchInput.addEventListener('input', (event) => {
   // Update query value
   query = event.target.value;
   // Filter projects based on all field values

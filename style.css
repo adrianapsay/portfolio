@@ -17,7 +17,7 @@ body {
     padding: 10rem;
     text-decoration: none;
     color: inherit;
-    /* text-align: center; */
+    text-align: center;
     padding: 0.5em;
     accent-color: var(--color-accent);
   }
