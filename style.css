@@ -17,7 +17,7 @@ body {
     padding: 10rem;
     text-decoration: none;
     color: inherit;
-    text-align: center;
+    /* text-align: center; */
     padding: 0.5em;
     accent-color: var(--color-accent);
   }
@@ -98,6 +98,15 @@ input, textarea {
   grid-template-rows: subgrid;
   grid-row: span 3;
   gap: 1em;
+}
+
+.project-year {
+  font-size: 0.9rem;
+  color: #a2a2a2;
+  margin-top: 4px;
+  font-variant-numeric: proportional-nums;
+  font-style: italic;
+  font-family: 'Helvetica Neue';
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -195,3 +204,56 @@ section > article header {
   color: inherit;
 }
 
+/* .projects-title {
+  text-align: left;
+} */
+
+#projects-pie-plot {
+  max-width: 20em;
+  margin-block: 2em;
+  overflow: visible;
+}
+
+.legend {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+  gap: 1rem;
+  list-style: none;
+  padding: 1rem;                /* Add padding inside the legend */
+  margin: 1.5rem 0;             /* Add spacing around the legend */
+  border: 1px solid;       /* Add a light border */
+  border-radius: 0.3rem;        /* Slight rounding on the corners */
+  flex: 1
+}
+
+.legend li {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 1rem;
+  color: inherit;
+}
+
+.swatch {
+  width: 1.5em;
+  height: 1.5em;
+  background-color: var(--color);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.container {
+  display: flex;
+  align-items: center;       /* Center items vertically */
+  gap: 2rem;                 /* Space between pie chart and legend */
+}
+
+.searchBar {
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  font-size: 20px;
+  border: 2px solid inherit;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
