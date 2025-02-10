@@ -257,3 +257,22 @@ section > article header {
   box-sizing: border-box;
   margin-bottom: 20px;
 }
+
+&:has(path:hover) {
+  path:not(:hover) {
+    opacity: 0.5;
+  }
+}
+
+path {
+  transition: 300ms;
+  cursor: pointer;
+}
+
+.selected {
+  --color: #ff0090 !important;
+
+  &:is(path) {
+    fill: var(--color);
+  }
+}

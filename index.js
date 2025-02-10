@@ -1,8 +1,16 @@
 import { fetchJSON, renderProjects, fetchGitHubData } from './global.js';
-const projects = await fetchJSON('./lib/projects.json');
-const latestProjects = projects.slice(0, 3);
+const list_projects = await fetchJSON('/lib/projects.json');
+const isProjectsPage = window.location.pathname.includes('/projects/');
 const projectsContainer = document.querySelector('.projects');
-renderProjects(latestProjects, projectsContainer, 'h2');
+
+if (projectsContainer) {
+    if (isProjectsPage) {
+        renderProjects(list_projects, projectsContainer, 'h2');
+    } else {
+        const latestProjects = list_projects.slice(0, 3);
+        renderProjects(latestProjects, projectsContainer, 'h2');
+    }
+}
 const githubData = await fetchGitHubData('adrianapsay');
 const profileStats = document.querySelector('#profile-stats');
 if (profileStats) {
