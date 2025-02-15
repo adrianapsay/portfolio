@@ -324,7 +324,7 @@ path {
 
 /* Subtle Gridline Styling */
 .gridlines line {
-  stroke: rgba(200, 200, 200, 0.2);
+  stroke: rgba(200, 200, 200, 0.4);
   stroke-width: 1px;
   stroke-dasharray: 4 4;
 }
